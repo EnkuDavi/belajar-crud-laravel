@@ -2,7 +2,7 @@
 
 @section('contents')
               <div class="card-header">
-                <h3 class="card-title">Bordered Table</h3>
+                <h3 class="card-title">Pertanyaan</h3>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
@@ -13,6 +13,7 @@
                       <th>Judul</th>
                       <th>Isi</th>
                       <th>Created</th>
+                      <th>Action</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -22,6 +23,9 @@
                             <td> {{ $p->judul }} </td>
                             <td> {{ $p->isi }} </td>
                             <td> {{ $p->tgl_buat }} </td>
+                            <td>
+                              <a href="/pertanyaan/{{$p->id}}" class="btn btn-primary">Detail</a>
+                            </td>
                         </tr>
                     @endforeach
                   </tbody>

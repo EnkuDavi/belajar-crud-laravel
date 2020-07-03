@@ -1,19 +1,13 @@
 <?php
 
 namespace App\Models;
-use illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\DB;
 
 class JawabanModel {
-    public function getAll()
+    public static function getAll()
     {
-        DB::table('jawaban')->get();
-        DB::where('')
+        $jawaban = DB::table('jawaban')->get();
         return $jawaban;
     }
 
-    public function save($data)
-    {
-        $row_jawaban = DB::table('jawaban')->insert($data); 
-        return $row_jawaban;   
-    }
 }
